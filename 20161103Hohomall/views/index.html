@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>弦歌</title>
+		<!--JQuery-->
+		<script src=" /framwork/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/framwork/jquery.form.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src=" /js/CustomRoller.js" type="text/javascript" charset="utf-8"></script>
+		<!--bootstrap-->
+		<link rel="stylesheet" type="text/css" href=" /css/bootstrap.min.css" />
+		<script src=" /framwork/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--angular-->
+		<script src=" /js/router.js" type="text/javascript" charset="utf-8"></script>
+		<script src=" /framwork/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src=" /framwork/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+		<script src=" /js/angapp.js" type="text/javascript" charset="utf-8"></script>
+		<script src=" /js/controller.js" type="text/javascript" charset="utf-8"></script>
+		<script src=" /js/directive.js" type="text/javascript" charset="utf-8"></script>
+		<script src=" /js/filter.js" type="text/javascript" charset="utf-8"></script>
+		<script src=" /js/service.js" type="text/javascript" charset="utf-8"></script>
+		<!--自定义-->
+		<link rel="stylesheet" type="text/css" href=" /css/reset.css" />
+		<link rel="stylesheet" type="text/css" href=" /css/common.css" />
+		<link rel="stylesheet" type="text/css" href=" /css/icon.css"/>
+		<link rel="stylesheet" type="text/css" href=" /css/home.css"/>
+		<link rel="stylesheet" type="text/css" href=" /css/shopping.css"/>
+		<link rel="stylesheet" type="text/css" href=" /css/detail.css"/>
+		<link rel="stylesheet" type="text/css" href=" /css/colletion.css"/>
+		<link rel="stylesheet" type="text/css" href=" /css/order.css"/>
+		<link rel="stylesheet" type="text/css" href=" /css/pay.css"/>
+		<link rel="stylesheet" type="text/css" href=" /css/person.css"/>
+		<link rel="stylesheet" type="text/css" href=" /css/search.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/submitOrder.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/myStore.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/homeSearch.css"/>
+		<script src=" /js/loopTurn.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/magnify.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<script type="text/javascript">
+		$(function(){
+			//本来在这里先写滚动条，看来是不行了，有个异步加载页面的问题，每次加载页面我都应该初始化滚动条
+		})
+	</script>
+	<body>
+		<!--顶部导航栏-->
+		<header class="hohoMall-header navbar-fixed-top">
+			<div class="container">
+				<!--中屏和大屏显示菜单栏-->
+				<div class="row visible-md visible-lg page-pc">
+					<div class="logo col-md-1 col-xs-3">
+						<img src=" /img/商城图标.png" />
+					</div>
+					<div class="searchInput col-md-4  col-lg-offset-1  visible-md visible-lg">
+						<div class="form-group has-feedback">
+							<input type="text" class="form-control" id="searchGood" placeholder="请输入商品名称" />
+							<span class="glyphicon form-control-feedback glyphicon-search searchBtn" search-btn></span>
+						</div>
+					</div>
+					<div class="navMenu col-md-5 col-xs-8 col-lg-offset-1 pull-right">
+						<ul class="list-inline">
+							<div class="row">
+								<li class="col-md-4 col-xs-4">
+									<a ui-sref="homepage.main">
+									<span class="glyphicon glyphicon-home"></span>
+									首页
+									</a>
+								</li>
+								<li class="col-md-8 loginShow">
+									<div class="row">
+										<a href="" class="col-md-6" ui-sref="personpage">
+											<span class="glyphicon glyphicon-user"></span>
+											个人主页</a>
+										<a href="javascript:;" class="col-md-6" left-menu-ctl="1">
+											<span class="glyphicon glyphicon-th-list "></span> 
+											菜单</a>
+									</div>
+								</li>
+								<li class="col-md-4 col-xs-6 nologinShow  pull-right">
+									<div class="row">
+										<a class="col-md-6 col-xs-6" data-toggle="modal" data-target="#loginModal">登录</a>
+										<a href="regist.html" class="col-md-6 col-xs-6" left-menu-ctl>注册</a>
+									</div>
+								</li>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<!--内容部分-->
+		<div class="hohoMall-body">
+			
+			<div class="hohoMall-inner">
+				<div class="container ">
+					<div class="hohoMall-content" ui-view="mallCotent">
+						
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+		<!--底部-->
+		<footer class="hohoMall-footer text-center hidden-sm navbar-fixed-bottom">
+			&copy;2007-2016 &nbsp;&nbsp; hohoMall.com
+		</footer>
+		
+		<!--右栏隐藏菜单-->
+		<div class="navRightMenu">
+			<header>
+				<div class="hohoicon hohoicon-left-arrow"></div>
+			</header>
+			<div class="menuContent">
+				<div class="row">
+					<div class="userinfo col-md-6 col-md-offset-3">
+						<div class="avatar">
+							<img ng-src="{{userData.avatar}}" />
+						</div>
+						<div class="caption text-center ">
+							<h1 ng-bind="userData.username"></h1>
+						</div>
+					</div>
+				</div>
+				
+				<div class="user-opt">
+					<div class="btn-group btn-group-justified">
+						<div class="btn-group">
+							<div class="dropdown">
+								<a class="btn btn-danger " data-toggle="dropdown">
+									
+									<span class="glyphicon glyphicon-cog"></span>
+									设置个人资料</a>
+								<ul class="dropdown-menu bg-danger">
+									<li><a data-toggle="modal" data-target="#modnameModal" id="updateUsername">修改用户名</a></li>
+									<li><a data-toggle="modal" data-target="#modpsdModal"  id="updatePsd">修改密码</a></li>
+									<li><a data-toggle="modal" data-target="#modAvaModal"  id="updateAvatar">修改头像</a></li>
+								</ul>
+							</div>
+							<a class="btn btn-danger" ui-sref="publishGood"  id="publishGood">
+								<span class="glyphicon glyphicon-pencil "></span>
+								发布商品
+							</a>
+							<a class="btn btn-danger" ui-sref="myStore"  id="myStore">
+								<span class="glyphicon glyphicon-gift "></span>
+								我的店铺
+							</a>
+							
+							<a class="btn btn-danger" ui-sref="orderpage" id="currentOrder">
+								<span class="glyphicon glyphicon-ok "></span>
+								当前订单</a>
+							<a class="btn btn-danger" ui-sref="shoppingcar" id="shoppingcarBtn">
+								<span class="glyphicon glyphicon-shopping-cart"></span>
+								购物车</a>
+							<a class="btn btn-danger" ui-sref="collection">
+								<span class="glyphicon glyphicon-heart"></span>
+								收藏夹</a>
+								
+							<a class="btn btn-danger" ui-sref="userManage" id="userManage">
+								<span class="glyphicon glyphicon-user"></span>
+								管理用户</a>
+							<a class="btn btn-danger" quit>
+								<span class="glyphicon glyphicon-off"></span>
+								退出登录</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--登录模态框-->
+		<div class="modal" id="loginModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<p class="h2 text-danger">登录
+							<span class="alert alert-danger"></span>
+							<button class="close" data-dismiss="modal">&times;</button>
+						</p>
+					</div>
+					<div class="modal-body">
+						<form id="loginform">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="请输入账号名"name="username" />
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="请输入密码"name="password"  />
+							</div>
+							<div class="form-group form-group-lg">
+								<input submit-btn type="button" class="form-control btn-danger" value="登录啦" id="login" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--更改用户名模态框-->
+		<div class="modal" id="modnameModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<p class="h2 text-danger">修改用户名
+								<span class="alert alert-danger"></span>
+							<button class="close" data-dismiss="modal">&times;</button>
+						</p>
+					</div>
+					<div class="modal-body">
+						<form id="udeUnameform">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="请填写新用户名" name="username" value="{{userData.username}}" />
+							</div>
+							<div class="form-group form-group-lg">
+								<input update-username type="button" class="form-control btn-danger" value="确认修改"  />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--更改密码模态框-->
+		<div class="modal" id="modpsdModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<p class="h2 text-danger">修改密码
+								<span class="alert alert-danger"></span>
+							<button class="close" data-dismiss="modal">&times;</button>
+						</p>
+					</div>
+					<div class="modal-body">
+						
+						<form id="udePsdform">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="请输入原密码"  name="opassword"/>
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="请输入新密码"name="password" />
+							</div>
+							<div class="form-group form-group-lg">
+								<input update-psd type="button" class="form-control btn-danger" value="确认修改"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--修改头像模态框-->
+		<div class="modal" id="modAvaModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<p class="h2 text-danger">修改头像
+							<span class="alert alert-danger"></span>
+							<button class="close" data-dismiss="modal">&times;</button>
+						</p>
+					</div>
+					<div class="modal-body">
+						
+						<form id="udeAvaform"  action="javascript:;">
+							<div class="form-group form-group-lg">
+								<input type="file" file-avatar class="form-control" placeholder="请选择图片" name="avatar"/>
+								<div>
+									<div class="">
+										<span class="glyphicon glyphicon-picture"></span>
+										&nbsp;&nbsp;请选择头像图片
+									</div>
+									<ul class="avapreview clearfix" >
+										<li><img src=""/></li>
+									</ul>
+								</div>
+							</div>
+							<div class="form-group form-group-lg">
+								<input update-avatar type="submit" class="form-control btn-danger" value="确认修改"  />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--提示框-->
+		<div class="modal" id="TipsModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<h1 class="tipsContent text-danger"></h1>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger " data-dismiss="modal">确定</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<!--支付框-->
+		<div class="modal" id="payModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<p class="h2 text-danger">请输入支付密码
+							<span class="alert alert-danger"></span>
+							<button class="close" data-dismiss="modal">&times;</button>
+						</p>
+					</div>
+					<div class="modal-body">
+						<h3 style="margin-bottom: 20px;">
+							应付&nbsp;<span>{{currentAccount}}</span>&nbsp;元
+							<small>（您的余额为{{userData.money}}元）</small>
+							<!--<small>（{{[userData.money,allAccount]|calRemainMoney}}）</small>-->
+						</h3>
+						<form id="udePsdform">
+							<div class="form-group">
+								<input type="text" hidden  name="payMoney" />
+								<input type="text" hidden  name="orderId" />
+								<input type="password" class="form-control" placeholder="请输入支付密码"  name="password"/>
+							</div>
+							
+							<div class="form-group form-group-lg">
+								<input comfirm-pay  type="button" class="form-control btn-danger" value="买买买"/>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+	
+	
+	</body>
+
+</html>

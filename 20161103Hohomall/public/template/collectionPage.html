@@ -1,0 +1,14 @@
+<div class="collection">
+	<h1 class="pageTitle">我的收藏</h1>
+	<ul >
+		<li on-finish-render ng-repeat="collection in collections">
+			<a ng-href="#/detailGood/{{collection.goodId}}" class="thumbnail">
+				<img ng-src="{{collection.good.goodImg[0]}}"/>
+				<div class="caption">
+					<h4>￥ <span class="price" ng-bind="collection.good.goodPrice">135</span></h4>
+				</div>
+			</a>
+		</li>
+		
+	</ul>
+</div>

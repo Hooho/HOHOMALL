@@ -1,0 +1,292 @@
+body{
+	padding-top: 60px;
+	font-family: "微软雅黑"
+}
+.hohoMall-header{
+	height: 60px;
+	background-color: #b71a21;
+}
+.logo{
+	height: 60px;
+	line-height: 60px;
+}
+.searchInput{
+	margin-top: 13px;
+}
+.searchBtn{
+	cursor: pointer ;
+	pointer-events: visible;
+}
+.navMenu{
+	text-align: center;
+	font-size: 18px;
+	line-height: 60px;
+}
+.navMenu a{
+	color: white;
+}
+.loginShow{
+	display: none;
+}
+.nologinShow{
+	display: none;
+}
+/*中间部分*/
+.hohoMall-body{
+	overflow: hidden;
+	/*height: 580px;*/
+}
+.hohoMall-inner{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	position: relative;
+	padding-top: 30px ;
+	/*min-height: 100vh;*/
+	height: auto;
+}
+.hohoMall-inner .container{
+	/*flex: 1;*/
+}
+.hohoMall-content{
+	/*height: 1700px;*/
+}
+/*底部*/
+.hohoMall-footer{
+	/*position: absolute;*/
+	/*bottom: 0;*/
+	height: 30px;
+	width: 100%;
+	background-color:  #b71a21;
+	color: white;
+	/*margin-top: 50px;*/
+}
+/*左菜单隐藏栏*/
+.navRightMenu{
+	position: fixed;
+	top: 0;
+	/*right: 0;*/
+	right: -350px;
+	z-index: 1031;
+	height: 100vh;
+	width: 300px;
+	padding: 20px ;
+	background-color: #c81a21;
+	box-shadow:  0 0 20px black;
+	-webkit-transition: 0.7s;
+	-moz-transition: 0.7s ease-in-out;
+	-ms-transition: 0.7s ease-in-out;
+	-o-transition: 0.7s ease-in-out;
+	transition: 0.7s ease-in-out;
+	opacity: 0 ;
+}
+.navRightMenu.open{
+	right: 0;
+	opacity: 1;
+}
+.navRightMenu .hohoicon{
+	height: 30px;
+	width: 40px;
+	cursor: pointer;
+}
+.userinfo{
+	color: white;
+}
+.userinfo .avatar{
+	-webkit-border-radius:100% ;
+	-moz-border-radius: 100%;
+	border-radius:100% ;
+	height: 115px;
+	width: 115px;
+	overflow: hidden;
+}
+
+
+.user-opt{
+	/*margin-top: 5px;*/
+}
+.user-opt a{
+	margin-top:10px;
+}
+.user-opt .dropdown-menu {
+	width: 100%;
+}
+
+#publishGood,#userManage{
+	display: none;
+}
+
+#publishGood,#myStore{
+	display: none;
+}
+/*滚动条*/
+.roller{
+	background-color: #e61a21;
+	border-radius: 10px;
+	z-index: 2;
+}
+.orbital{
+	width: 10px;
+	
+}
+/*线*/
+.line{
+	display: inline;
+	background-color: #e4e4e5;
+	width: 1px ;
+}
+/*商城标记*/
+.mall-logo{
+	width: 150px;
+}
+.pageTitle{
+	margin-bottom: 40px;
+}
+
+/*模态框*/
+#modAvaModal input[type="file"]{
+	position: relative;
+	z-index: 2;
+	opacity: 0;
+	cursor: pointer;
+	vertical-align: middle;
+}
+#modAvaModal input[type="file"]+div{
+	position: absolute;
+	width: 100%;
+	font-size: 25px;
+	margin-top: -35px;
+	z-index: 1;
+}
+#modAvaModal input[type="file"]+div>div{
+	float: left;
+}
+.avapreview {
+	/*position: absolute;*/
+	float: left;
+	display: none;
+	margin-left: 10px;
+}
+.avapreview li{
+	float: left;
+	margin-right: 5px;
+	height: 60px;
+	width: 60px;
+	overflow: hidden;
+}
+#udeAvaform>div:first-child{
+	margin-bottom: 50px;
+}
+/*模态框的提示*/
+.modal .alert{
+	position: absolute;
+	margin-left: 40px;
+	padding: 5px 70px 5px 30px;
+	font-size: 20px;
+	display: none;
+}
+
+/*订单样式*/
+
+.order-single{
+	border: 1px solid #DC0C29;
+	margin-bottom: 10px;
+}
+.order-single .header{
+	background-color: #DC0C29;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 20px;
+	color: white;
+}
+.order-single .body{
+	height: 80px;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+}
+.order-single .body .good-info img{
+	width: 60px;
+	height: 60px;
+}
+.order-single .body .good-text{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-word;
+	height: 60px;
+}
+
+
+/*充值*/
+.fullMoney{
+	width: 400px;
+}
+
+/*发布商品*/
+.publishGood{
+	padding-bottom: 60px;
+}
+textarea{
+	resize: none;
+}
+
+.publishGood .pageTitle{
+	padding-left: 20px;
+}
+
+.publishGood .avapreview li{
+	height: 80px;
+	width: 80px;
+}
+.publishGood  .file-list{
+	float: left;
+}
+.publishGood .fileIMG{
+	/*position: absolute;*/
+	float: left;
+	height: 80px;
+	width: 80px;
+	border: 1px solid #E0E0E0;
+	/*background-color: red;*/
+	/*margin-top: -80px;*/
+	/*z-index: -1;*/
+	margin-right: 5px;
+	cursor: pointer;
+	color: #E0E0E0;
+	font-size: 40px;
+	text-align: center;
+	line-height: 80px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.publishGood .fileIMG input[type="file"]{
+	position: absolute;
+/*	z-index: -1;*/
+	margin-top: -80px;
+	width: 80px;
+	height: 80px;
+	font-size: 14px;
+	opacity: 0;
+	cursor: pointer;
+}
+.publishGood .form-group .control-label{
+	text-align: center;
+}
+
+/*遍历*/
+.on-finish-render{
+	visibility: hidden;
+	height: 30px;
+	width: 100%;
+}
+.modal-dialog{
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+.modal.in .modal-dialog{
+	transform: translate(0,100px);
+}

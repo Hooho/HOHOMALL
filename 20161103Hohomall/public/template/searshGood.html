@@ -1,0 +1,20 @@
+<div class="search">
+	<h1 class="pageTitle">以下是搜索的结果 </h1>
+	<h2 style="color: darkred;display: none;" id="searchTip"  >对不起，我店小，搜不到你要的东西~~~~~~~~</h2>
+	<div class="good-list">
+		<ul >
+			<li class="good-single" ng-repeat="good in searchData " on-finish-render>
+				<a  ng-href="#/detailGood/{{good._id}}">
+					<div class="img">
+						<img ng-src="{{good.goodImg[0]}}"/>
+					</div>
+					<div class="text">
+						<p>{{good.goodName}}</p>
+						<p>￥<span>{{good.goodPrice}}</span></p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+</div>

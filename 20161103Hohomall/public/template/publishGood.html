@@ -1,0 +1,100 @@
+<div class="publishGood form-horizontal">
+	<h1 class="pageTitle">发布商品</h1>
+
+	<form action="javascript:;" pbgood >
+
+		<!--名称-->
+		<div class="form-group ">
+			<label for="" class="control-label col-md-2 ">商品名称</label>
+			<div class=" col-md-6">
+				<input class="form-control" type="text" name="goodName" id="goodName" required />
+			</div>
+		</div>
+		<!--简介-->
+		<div class="form-group">
+			<label for="" class="control-label col-md-2">描述一下你的宝贝</label>
+			<div class="col-md-6">
+				<textarea class="form-control" name="goodIntro" rows="5" id="goodIntro" cols="30" required></textarea>
+			</div>
+
+		</div>
+		<!--单价-->
+		<div class="form-group">
+			<label for="" class="control-label col-md-2">单价</label>
+			<div class="col-md-6">
+				<input class="form-control" type="number" name="goodPrice" id="goodPrice"   required/>
+			</div>
+		</div>
+		<!--数量-->
+		<div class="form-group">
+			<label for="" class="control-label col-md-2">库存</label>
+			<div class=" col-md-6">
+				<input class="form-control " type="number" name="goodCount" id="goodCount"  required />
+			</div>
+		</div>
+		<!--类型-->
+		<div class="form-group">
+			<label  class="control-label col-md-2">类型</label>
+			<div class="radio col-md-6">
+				<label><input type="radio" name="goodType"  value="t1" checked/>衬衫</label>
+				<label><input type="radio" name="goodType"  value="t2" />羽绒服</label>
+				<label><input type="radio" name="goodType"  value="t3" />外套</label>
+				<label><input type="radio" name="goodType"  value="t4" />针织衫</label>
+				<label><input type="radio" name="goodType"  value="t5" />水柔棉</label>
+				<label><input type="radio" name="goodType"  value="t6" />裤装</label>
+				<label><input type="radio" name="goodType"  value="t7" />鞋子</label>
+				<label><input type="radio" name="goodType"  value="t8" />袜品</label>
+				<label><input type="radio" name="goodType"  value="t9" />家居配饰</label>
+			</div>
+		</div>
+		<!--颜色-->
+		<div class="form-group">
+			<label  class="control-label col-md-2">颜色</label>
+			<div class="checkbox col-md-6">
+				<label><input type="checkbox" name="goodColor" value="c1" />红色</label>
+				<label><input type="checkbox" name="goodColor" value="c2" />黑色</label>
+				<label><input type="checkbox" name="goodColor" value="c3" />蓝色</label>
+				<label><input type="checkbox" name="goodColor" value="c4" />白色</label>
+				<label><input type="checkbox" name="goodColor" value="c5" />绿色</label>
+				<label><input type="checkbox" name="goodColor" value="c6" />灰色</label>
+			</div>
+		</div>
+		<!--大小-->
+		<div class="form-group">
+			<label  class="control-label col-md-2">大小</label>
+			<div class="checkbox col-md-6">
+				<label><input type="checkbox" name="goodSize" value="s0" />XL</label>
+				<label><input type="checkbox" name="goodSize" value="s1" />L</label>
+				<label><input type="checkbox" name="goodSize" value="s2" />M</label>
+				<label><input type="checkbox" name="goodSize" value="s3" />S</label>
+				<label><input type="checkbox" name="goodSize" value="s4" />SS</label>
+			</div>
+		</div>
+		<!--图片-->
+		<div class="form-group goodimg">
+			<label for="" class="control-label col-md-2">选择商品样图<br /> <small style="font-size: 12px ;font-weight: 300;">（最多五张）</small></label>
+			<div class="col-md-6">
+				<ul class="avapreview clearfix">
+				</ul>
+				<div class="file-list">
+					<div class="fileIMG" add-img>
+						<span class="glyphicon glyphicon-plus"></span>
+						<input type="file" name="goodImg"  />
+					</div>
+				</div>
+				
+				<!--放置-->
+				<div class="fileinput"></div>
+			</div>
+
+		</div>
+		<!--发布-->
+		<div class="form-group form-group-lg">
+			<div class="col-md-6 col-lg-offset-2">
+				<input class="form-control btn-danger " type="submit"   value="立即发布"  />
+			</div>
+
+		</div>
+
+	</form>
+</div>

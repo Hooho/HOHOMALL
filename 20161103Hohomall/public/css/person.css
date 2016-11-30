@@ -1,0 +1,79 @@
+.person{
+	padding-bottom: 60px;
+}
+.person .container{
+	width: 100%;
+}
+.person .avatar{
+	width: 155px;
+	height: 155px;
+	overflow: hidden;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+.person>.header{
+	height: 200px;
+	background-color: #E61B54;
+	margin-bottom: 30px;
+	padding: 20px 30px;
+	color: white;
+	
+}
+.person .good-opt{
+	/*background-color: #e61a21;*/
+	margin-bottom: 30px;
+}
+.person .good-opt a{
+	padding: 10px 0;
+	color: white;
+	font-size: 16px;
+	background-color:  #E61B54
+}
+.person .good-opt a:hover{
+	color: white;
+}
+
+.person .part-2 .leftMenu{
+	/*height: 300px;*/
+	padding: 10px 60px;
+	background-color:  #E61B54;
+	border-radius: 10px;
+}
+.person .part-2 .leftMenu a{
+	margin-bottom: 10px;
+	border-bottom: 2px solid white;
+	background-color: #E61B54;
+	color: white;
+	font-size: 18px;
+}
+.person .part-2 .leftMenu a.active{
+	background-color: white;
+	color: #E61B54;
+}
+.person .part-2 .personRight {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.person .part-2 .personRight .order-single .header{
+	background-color: #E61B54
+}
+
+.person .good-opt  .news{
+	position: absolute;
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: white;
+	background-color: #b71a21;
+	border-radius: 100%;
+	margin-top: -10px;
+	margin-left: -2px;
+}
+.personRight .pageTitle{
+	font-size: 25px;
+	margin: 0;
+	margin-bottom: 20px;
+}

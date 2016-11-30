@@ -1,0 +1,75 @@
+
+<div class="shoppingcar">
+	<h1 class="pageTitle">我的购物车</h1>
+	
+	<div class="head">
+		<ul class="row">
+			<li class="col-md-1">
+				<input type="checkbox" name="" id="allcheck1"  all-check />
+				<label for="allcheck1">全选</label>
+			</li>
+			<li class="col-md-4">商品信息</li>
+			<li class="col-md-2">单价</li>
+			<li class="col-md-2">数量</li>
+			<li class="col-md-2">金额</li>
+			<li class="col-md-1">操作</li>
+		</ul>
+	</div>	
+	<div class="body">
+		<ul class="row "  ng-repeat="good in goodsCar" goodid="{{good._id}}"> 
+			<li class="col-md-1" >
+				<input type="checkbox" class="singleCheck"  single-check/>
+			</li>
+			<li class="col-md-4 good-info">
+				<a ng-href="#/detailGood/{{good._id}}">
+					<div class="row">
+						<div class="col-md-3">
+							<img ng-src="{{good.goodImg[0]}}"/>
+						</div>
+						<div class="col-md-8" ng-bind="good.goodName">
+							
+						</div>
+					</div>
+				</a>
+				
+			</li>
+			<li class="col-md-2 good-price">￥ <span ng-bind="good.goodPrice"></span></li>
+			
+			<li class="col-md-2 good-count" good-count-select="{{good.goodCount}}" price="{{good.goodPrice}}">
+				<div class="input-group  input-group-sm">
+					<span class="input-group-addon good-minus">
+						<span class="glyphicon glyphicon-minus"></span>
+					</span>
+					<input type="text" class="form-control" name="" id="" value="{{good.orderCount||1}}" />
+					<span class="input-group-addon good-plus">
+						<span class="glyphicon glyphicon-plus"></span>
+					</span>
+				</div>
+			</li>
+			<li class="col-md-2 good-account">￥ <span >{{good|caluteAccount}}</span></li>
+			<li class="col-md-1"><a href="javascript:;" del-form-car="{{good._id}}">删除</a></li>
+		</ul>
+		
+	</div>	
+	<div class="footer">
+		<ul class="row">
+			<li class="col-md-2">
+				
+				<input type="checkbox" name="" id="allcheck2" value="" all-check />
+				<label for="allcheck2">全选</label>
+				
+				<span mass-del style="cursor: pointer;">删除</span>
+			</li>
+			<li class="col-md-2 col-lg-offset-3" >
+				已选商品<span class="good-text count-text">0 </span> 件
+			</li>
+			<li class="col-md-3">
+				合计(不含运费) <span class="good-text account-text">0 </span> 元	
+			</li>
+		</ul>
+		
+		<button class="account col-md-2" close-accouts>结算</button>
+	</div>	
+</div>
+
+<div ng-repeat="a in goodsCar"  class="on-finish-render" on-finish-render>1</div>

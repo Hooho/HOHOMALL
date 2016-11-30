@@ -1,0 +1,22 @@
+
+<div class="homeSearch">
+	
+	<div class="good-list">
+		<ul >
+			<li class="good-single" ng-repeat="good in searchData " on-finish-render>
+				<a  ng-href="#/detailGood/{{good._id}}">
+					<div class="img">
+						<img ng-src="{{good.goodImg[0]}}"/>
+					</div>
+					<div class="text">
+						<p>{{good.goodName}}</p>
+						<p>￥<span>{{good.goodPrice}}</span></p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<!--<div ng-repeat="a in searchData"  class="on-finish-render" on-finish-render>1</div>-->

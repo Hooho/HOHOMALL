@@ -1,0 +1,62 @@
+.shoppingcar label{
+	font-weight: normal;
+	vertical-align: top;
+}
+
+.shoppingcar .head,.shoppingcar .footer{
+	background-color: #DC0C29;
+	margin-bottom: 20px;
+	color: white;
+	font-size: 16px;
+	padding: 15px 10px  5px 10px;
+	position: relative;
+}
+.shoppingcar .body{
+	margin-bottom: 20px;
+	padding: 0 10px;
+	overflow: hidden;
+}
+.shoppingcar input{
+	margin: 0;
+	background-color: white
+}
+.shoppingcar .head li:first-child,.shoppingcar .body li:first-child,.shoppingcar .footer li:first-child {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.shoppingcar .body >ul{
+	padding: 10px 0;
+	margin-bottom: 20px;
+	background-color:#f8f8f8
+}
+.shoppingcar .good-text{
+	display: inline-block;
+	min-width: 60px;
+	text-align: center;
+}
+.shoppingcar .account{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	font-size: 30px;
+	border: none;
+	background-color: #b71a21
+}
+.shoppingcar  .good-count{
+	padding-right: 60px;
+	box-sizing: border-box;
+}
+.shoppingcar  .good-count .input-group-addon{
+	cursor: pointer;
+}
+.shoppingcar  .good-count input{
+	text-align: center;
+}
+.shoppingcar .good-price,.shoppingcar .good-account{
+	color: #b71a21;
+}
+.shoppingcar .good-price>span,.shoppingcar .good-account>span{
+	font-size:18px ;
+}

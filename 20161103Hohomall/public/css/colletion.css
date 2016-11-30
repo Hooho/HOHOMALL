@@ -1,0 +1,33 @@
+.collection ul {
+	
+}
+.collection ul li{
+	margin-bottom: 10px;
+	float: left;
+	margin-right: 20px;
+	transition: 0.5s;
+}
+.collection ul li:hover{
+	margin-top: -3px;
+}
+
+.collection ul li a{
+	height: 100%;
+	width: 165px;
+	border: 1px solid #E6E6E6;
+	margin: 0;
+}
+.collection ul li a:hover{
+	border-color: #b71a21;
+	box-shadow:  0 0 10px #b71a21;
+}
+	
+	
+.collection ul li a img{
+	width: 150px;
+	height: 150px;
+	border: 1px solid #E0E0E0;
+}
+.collection ul li a .price{
+	color: #b71a21;
+}

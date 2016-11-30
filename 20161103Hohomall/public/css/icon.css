@@ -1,0 +1,9 @@
+.hohoicon{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	
+}
+.hohoicon-left-arrow{
+	background-image: url(../img/icon/leftArrow.png);
+}

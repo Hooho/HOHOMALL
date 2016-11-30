@@ -1,0 +1,52 @@
+
+
+.search{
+	padding-bottom: 60px;
+}
+
+.search .good-list ul{
+	display: flex;
+	/*justify-content: space-between;*/
+	flex-flow: row wrap;
+	/*align-content: space-between;*/
+}
+
+.search .good-list ul li{
+	/*float: left;*/
+	height:300px;
+	width:210px ;
+	border:1px solid #E0E0E0;
+	margin-right: 18px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+.search .good-list .good-single .img{
+	width: 100%;
+	height: 200px;
+	background-color: darkgrey;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.search .good-list .good-single .img img{
+	height: 100%;
+	width: 100%;
+}
+.search .good-list .good-single:hover{
+	border-color:#b71a21;
+}
+.search .good-list .good-single:hover .text{
+	color: #b71a21;
+}
+.search .good-list .good-single .text p:first-child{
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.search .good-list .good-single .text p:last-child{
+	color: #b71a21;
+	font-size: 20px;
+}

@@ -1,0 +1,105 @@
+
+<div class="submitOrder">
+	<h1 class="pageTitle">订单确认</h1>
+	
+	<div class="submitOrder-inner">
+		<div class="head">
+			商品清单
+			
+			<div class="allAccount">
+				总共<span>{{allAccount}}</span>元
+			</div>
+		</div>
+		
+		<ul class="body">
+			<div class="row">
+				<div class="order-info col-md-5">
+					商品信息
+				</div>
+				<div class="order-price col-md-2 text">
+					<!--ng-bind="good.goodPrice"-->
+					单价
+				</div>
+				<div class="order-count col-md-1 text">
+					<!--ng-bind="good.goodPrice"-->
+					数量
+				</div>
+				<div class="order-account col-md-3 text">
+					<!--{{good|caluteAccount}}-->
+					金额
+				</div>
+				<div class="order-account col-md-1 text">
+					<!--{{good|caluteAccount}}-->
+					操作
+				</div>
+				
+			</div>
+			
+			<li class="row" ng-repeat=" order in orderGood" goodid="{{order._id}}">
+				<div class="order-info col-md-5">
+					<a ng-href="#/detailGood/{{order._id}}">
+						<div class="row">
+							<div class="col-md-3">
+								<img ng-src="{{order.goodImg[0]}}" />
+							</div>
+							<div class="col-md-7 text" ng-bind="order.goodName">
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="order-price col-md-2 text">
+					<!--ng-bind="order.goodPrice"-->
+					￥ <span ng-bind="order.goodPrice"></span>
+				</div>
+				<div class="order-count col-md-1 text">
+					<!--ng-bind="order.goodPrice"-->
+					× <span ng-bind="order.orderCount||1"></span>
+				</div>
+				<div class="order-account col-md-3 text">
+					<!--{{order|caluteAccount}}-->
+					￥ <span ng-bind="order|caluteAccount">55</span>
+				</div>
+				<div class="order-count col-md-1 ">
+					<!--ng-bind="good.goodPrice"-->
+					<a href="" del-order>删除</a>
+				</div>
+			</li>
+		
+		</ul>
+		
+		<a class="foot btn btn-danger btn-lg" submit-order>
+			提交订单
+		</a>
+	</div>
+</div>
+
+	<!--订单提交状态框-->
+	<div class="modal" id="orderSuccessModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					
+					<div class="modal-body">
+						<h1 class="text-danger tipsContent"></h1>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" order-success>确认</button>
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+
+<div ng-repeat="a in orderGood"  class="on-finish-render" on-finish-render>1</div>
+
+
+
+
+
+
+
+
+
+
+
+

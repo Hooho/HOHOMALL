@@ -1,0 +1,99 @@
+<!--菜单栏-->
+<!--中屏和大屏隐藏菜单栏-->
+<div class="home-nav  visible-md visible-lg">
+	<div class="row">
+		<div class="col-md-2 pull-left">
+			<img src="/img/soho.png" />
+		</div>
+		<ul class="  pull-right right-nav">
+			<li class="active" search-nav>
+				<a ui-sref="homepage.main">首页</a>
+			</li>
+			<li search-nav="t1">
+				<a ui-sref="homepage.search({type:'t1'})">衬衫</a>
+			</li>
+			<li search-nav="t2">
+				<a ui-sref="homepage.search({type:'t2'})">羽绒服</a>
+			</li>
+			<li search-nav="t3">
+				<a ui-sref="homepage.search({type:'t3'})">外套</a>
+			</li>
+			<li search-nav="t4">
+				<a ui-sref="homepage.search({type:'t4'})">针织衫</a>
+			</li>
+			<li search-nav="t5">
+				<a ui-sref="homepage.search({type:'t5'})">水柔棉</a>
+			</li>
+			<li search-nav="t6">
+				<a ui-sref="homepage.search({type:'t6'})">裤装</a>
+			</li>
+			<li search-nav="t7">
+				<a ui-sref="homepage.search({type:'t7'})">鞋</a>
+			<sref>
+			<li search-nav="t8">
+				<a ui-sref="homepage.search({type:'t8'})">袜品</a>
+			</li>
+			
+			<li search-nav="t9">
+				<a ui-sref="homepage.search({type:'t9'})">家居配饰</a>
+			</li>
+			
+		</ul>
+	</div>
+
+</div>
+
+<div class="homepage-main" ui-view="homeCenter">
+	
+	
+</div>
+
+<!--底部服务-->
+<div class="home-service">
+	<ul>
+		<li>
+			<img src="img/manage.png"/>
+			<p>7X9小时在线客服</p>
+		</li>
+		<span class="line"></span>
+		<li>
+			<img src="img/seven.png"/>
+			<p> 7天内退换货</p>
+			<p> 购物满199元免运费</p>
+		</li>
+		<span class="line"></span>
+		<li>
+			<img src="img/erwei.jpg"/>
+			<p> 扫描下载弦歌客户端</p>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<a href="">关于弦歌</a>
+		</li>
+		<span class="line"></span>
+		<li>
+			<a href="">新手指南</a>
+		</li>
+		<span class="line"></span>
+		<li>
+			<a href="">配送范围</a>
+		</li>
+		<span class="line"></span>
+		<li>
+			<a href="">支付方式</a>
+		</li>
+		<span class="line"></span>
+		<li>
+			<a href="">售后服务</a>
+		</li>
+		<span class="line"></span>
+		<li>
+			<a href="">帮助中心</a>
+		</li>
+	</ul>
+</div>
+
+
+<div ng-repeat="a in [1,2]"  class="on-finish-render" on-finish-render>1</div>
+

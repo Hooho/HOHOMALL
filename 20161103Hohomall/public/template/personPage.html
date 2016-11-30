@@ -1,0 +1,69 @@
+<div class="person">
+	<h1 class="pageTitle">我的主页</h1>
+	
+	
+	<div class="header">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="avatar">
+					<img ng-src="{{userData.avatar}}" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h1>{{userData.username}}</h1>
+				<h3>余额：&nbsp;<span>{{userData.money}}</span>&nbsp;&nbsp;元</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<ul class="good-opt row text-center">
+			<li class="col-md-3 col-xs-3">
+				<a href="">
+					<span class="glyphicon glyphicon-time"></span>
+					&nbsp;待付款 <span class="news waitPay">1</span>
+				</a>
+			</li>
+			<li class="col-md-3 col-xs-3">
+				<a href="">
+					<span class="glyphicon glyphicon-plane"></span>
+					&nbsp;待发货 <span class="news waitSend">1</span>
+				</a>
+			</li>
+			<li class="col-md-3 col-xs-3">
+				<a href="">
+					<span class="glyphicon glyphicon-check"></span>
+					&nbsp;待收货 <span class="news waitRecive">1</span>
+				</a>
+			</li>
+			<li class="col-md-3 col-xs-3">
+				<a href="">
+					<span class="glyphicon glyphicon-edit"></span>
+					&nbsp;待评价  <span class="news evaluate">1</span>
+				</a>
+			</li>
+		</ul>
+		
+		<div class="row part-2">
+			<div class="leftMenu col-md-3">
+				<div class="btn-group btn-group-justified">
+					<div class="btn-group">
+						
+						<a class="btn active" ui-sref="personpage.allOrder">已购买的宝贝</a>
+						
+						<a class="btn " ui-sref="personpage.fullMoney">充值</a>
+						
+						<a class="btn" ui-sref="personpage.collection"> 收藏</a>
+						<a class="btn">我要当卖家</a>
+						<a class="btn">我的评价</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="personRight  col-md-9 " ui-view="personRight"></div>
+			
+			
+		</div>
+	</div>
+	
+	
+</div>

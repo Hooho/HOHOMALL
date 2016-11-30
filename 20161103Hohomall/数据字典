@@ -1,0 +1,63 @@
+
+商品
+    goodName:{type:String},//商品名称
+    goodIntro:{type:String},//商品简介
+    goodPrice:{type:String},//商品价格
+    goodCount:{type:String},//商品总量
+    goodType:{type:String},//商品类型
+    goodColor:{type:Array},//商品颜色
+    goodSize:{type:Array},//商品大小
+    publisherId:{type:String},//商品发布者id
+    colletionCount:{type:Number},//收藏总人数
+    saleCount:{type:Number},//销量
+    publishDate:{type:Date,default: new Date()}//商品发布日期
+    
+收藏
+  	collecterId:{type:String},//商品
+    publisherId:{type:String},//收藏者
+    goodId:{type:String},//发布者
+    collectionDate:{type:Date,default: new Date()}//收藏日期
+    
+订单
+    buyerId:{type:String},//购买者
+    goodId:{type:String},//商品
+    publisherId:{type:Number},//发布者
+    state:{type:Number,default:1},//商品状态，下单还是发货
+    orderDate:{type:Date,default: new Date()}//下单日期
+    
+用户
+  	username:{type:String},//用户名
+    password:{type:String},//密码
+    avatar:{type:String},//头像
+    role:{type:Number},//角色，管理员，卖家，买家
+    registerDate:{type:Date,default: new Date()},//注册日期
+    money:{type:Number}//用户金额    
+    
+    
+查找会返回一个数据对象
+
+删除会返回一个
+
+更新会返回一个
+
+插入会返回一个插入的数据
+
+
+返回nlogin表示没有登录
+
+衣服类型
+
+
+t1 衬衫		t2羽绒服	t3外套   t4针织衫	t5水柔棉	t6裤装	t7鞋子  t8袜品  t9家居配饰
+颜色
+c1红色 		c2黑色 	c3蓝色 	c4白色 	c5绿色 	c6 	c7 
+大小
+s1 L 		s2M		s3S	 s4 	s5
+    
+    
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,86 @@
+
+<div class="detailGood ">
+	<p class="mall-logo"><img src="/img/soho.png"/></p>
+	<div class="detailGood-main clearfix ">
+		
+		<div class="detailGood-img" img-change>
+			<div class="img-b">
+				<img ng-src="{{detailGood.goodImg[0]}}"/>
+			</div>
+			
+			<div class="img-s clearfix">
+				<ul>
+					<li ng-repeat="img in detailGood.goodImg" ng-class="{{$first}}?'select':''"><img ng-src="{{img}}" on-finish-render/></li>
+				</ul>
+			</div>
+		</div> 
+		<div class="detailGood-info ">
+			<div class="container">
+				<!--商品名称-->
+				<div class="name" ng-bind="detailGood.goodName">
+				</div>
+				<!--商品价格-->
+				<div class="price row">
+					<div class="col-md-1">
+						价格
+					</div>
+					<div class="col-md-9 ">
+						￥<span ng-bind="detailGood.goodPrice"></span>
+					</div>
+					
+				</div>
+				<!--商品颜色-->
+				<div class="type  row">
+					<div class="col-md-1">
+						颜色
+					</div>
+					<div class="col-md-9 " >
+						<ul good-type-select>
+							<li ng-repeat="color in detailGood.goodColor"  ng-class="{{$first}}?'on':''">{{color|colorTran}}</li>
+						</ul>
+					</div>
+					
+				</div>
+				<!--商品大小-->
+				<div class="size  row">
+					<div class="col-md-1">
+						大小
+					</div>
+					<div class="col-md-9 ">
+						<ul good-type-select>
+							<li ng-repeat="size in detailGood.goodSize" ng-class="{{$first}}?'on':''">{{size|sizeTran}}</li>
+						</ul>
+					</div>
+					
+				</div>
+				<!--商品数量-->
+				<div class="count  row" good-count-select="{{detailGood.goodCount}}" price="{{detailGood.goodPrice}}">
+					<div class="col-md-1">
+						数量
+					</div>
+					<div class="col-md-3">
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon good-minus">
+								<span class="glyphicon glyphicon-minus"></span>
+							</span>
+							<input type="text" class="form-control" name="" id="" value="1" />
+							<span class="input-group-addon good-plus">
+								<span class="glyphicon glyphicon-plus"></span>
+							</span>
+						</div>
+					</div>
+					
+				</div>
+				<!--按钮-->
+				<div class="opt ">
+					<a class="btn btn-danger btn-lg"  buy-once>立即购买</a>
+					<a class="btn btn-danger  btn-lg" add-shopping-car>加入购物车</a>
+					<a class="btn btn-danger  btn-lg" collect>收藏</a>
+				</div>
+			
+			</div>
+			
+		</div>
+		
+	</div>
+</div>

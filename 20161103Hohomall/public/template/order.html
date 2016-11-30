@@ -1,0 +1,42 @@
+<div class="order">
+	<h1 class="pageTitle">当前订单 <small>(共  {{orderCount}}  单)</small></h1>
+	<div class="order-list">
+
+		<div class="order-single" ng-repeat="order in orders" orderid="{{order._id}}">
+			<div class="header">
+				下单时间：{{order.orderDate|formatDate}}
+			</div>
+			<ul class="row body">
+				<li class="col-md-4 good-info">
+					<div class="row">
+						<div class="col-md-3">
+							<img ng-src="{{order.good.goodImg[0]}}"/>
+						</div>
+						<div class="col-md-8 good-text">
+							{{order.good.goodName}}
+						</div>
+					</div>
+				</li>
+				<li class="col-md-2">
+					￥&nbsp;<span>{{order.good.goodPrice||1}}</span>
+					
+				</li>
+				<li class="col-md-2">
+					共&nbsp;&nbsp;<span>{{order.goodCount}}</span>&nbsp;&nbsp;件
+				</li>
+				<li class="col-md-2 account" >
+					<!--order.good.goodPrice,order.goodCount-->
+					共&nbsp;&nbsp;<span>{{ {goodPrice:order.good.goodPrice,orderCount:order.goodCount} |caluteAccount}}</span>&nbsp;&nbsp;元
+				</li>
+				<li class="col-md-2">
+					<a href="" class='btn  {{order.state|orderClass}}' deal-order>{{order.state|orderState}}</a>
+				</li>
+			</ul>
+		</div>
+	
+	</div>
+</div>
+
+
+
+<div ng-repeat="a in orders"  class="on-finish-render" on-finish-render>1</div>
