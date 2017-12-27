@@ -2,8 +2,8 @@
  * Created by 侯小贤 on 2016/11/15.
  */
 
-var  mongoose=require("mongoose")
 var  db=require("./db.js");
+var  mongoose=require("mongoose")
 
 var collectSchema=new mongoose.Schema({
     collecterId:{type:String},//收藏者
